@@ -16,270 +16,50 @@
             --exito: #2E7D32;
             --error: #C62828;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background-color: var(--fondo);
-            color: var(--texto);
-        }
-
-        .ƁĕâṛŶŧ-auth {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--cafe-principal) 0%, var(--azul-principal) 100%);
-        }
-
-        .auth-card {
-            background: var(--blanco);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .auth-logo {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--cafe-principal);
-            margin-bottom: 0.5rem;
-        }
-
-        .auth-logo span {
-            color: var(--azul-principal);
-        }
-
-        .auth-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 2rem;
-            font-size: 0.95rem;
-        }
-
-        .ƁĕâṛŶŧ-panel {
-            display: none;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .ƁĕâṛŶŧ-panel.active {
-            display: block;
-        }
-
-        .panel-header {
-            background: var(--blanco);
-            padding: 1.5rem 2rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .panel-title {
-            font-size: 1.6rem;
-            color: var(--cafe-principal);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-logout {
-            background: var(--error);
-            color: var(--blanco);
-            border: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        .card {
-            background: var(--blanco);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-        }
-
-        .card-title {
-            font-size: 1.2rem;
-            color: var(--cafe-principal);
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid var(--fondo);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
-
-        .form-label {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--cafe-principal);
-            font-size: 0.9rem;
-        }
-
-        .form-label span {
-            color: var(--error);
-        }
-
-        .form-input,.form-select,.form-textarea {
-            padding: 0.75rem;
-            border: 1px solid var(--borde);
-            border-radius: 6px;
-            font-size: 0.95rem;
-            font-family: inherit;
-        }
-
-        .form-input:focus,.form-select:focus,.form-textarea:focus {
-            outline: none;
-            border-color: var(--azul-principal);
-        }
-
-        .form-textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .form-actions {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .btn {
-            padding: 0.9rem 2rem;
-            border: none;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background: var(--azul-principal);
-            color: var(--blanco);
-            flex: 1;
-        }
-
-        .btn-primary:hover {
-            background: var(--azul-hover);
-        }
-
-        .btn-primary:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        .btn-secondary {
-            background: var(--borde);
-            color: var(--texto);
-        }
-
-        .alert {
-            padding: 1rem 1.5rem;
-            border-radius: 6px;
-            margin-bottom: 1.5rem;
-            display: none;
-            font-size: 0.95rem;
-        }
-
-        .alert-success {
-            background: #E8F5E9;
-            color: var(--exito);
-            border-left: 4px solid var(--exito);
-        }
-
-        .alert-error {
-            background: #FFEBEE;
-            color: var(--error);
-            border-left: 4px solid var(--error);
-        }
-
-        .mods-list {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .mod-item {
-            background: var(--fondo);
-            padding: 1.2rem;
-            border-radius: 8px;
-            border: 1px solid var(--borde);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .mod-info h4 {
-            color: var(--cafe-principal);
-            margin-bottom: 0.3rem;
-        }
-
-        .mod-meta {
-            font-size: 0.85rem;
-            color: #666;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.7rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-left: 0.5rem;
-        }
-
-        .badge-addons { background: #E3F2FD; color: #1565C0; }
-        .badge-texturas { background: #F3E5F5; color: #6A1B9A; }
-        .badge-dlc { background: #FFF3E0; color: #E65100; }
-        .badge-shaders { background: #E8F5E9; color: #2E7D32; }
-        .badge-mundos { background: #E0F2F1; color: #00695C; }
-        .badge-skins { background: #FCE4EC; color: #C2185B; }
-
-        .btn-delete {
-            background: var(--error);
-            color: var(--blanco);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            .panel-header {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background-color: var(--fondo); color: var(--texto); }
+       .ƁĕâṛŶŧ-auth { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(135deg, var(--cafe-principal) 0%, var(--azul-principal) 100%); }
+       .auth-card { background: var(--blanco); padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.25); width: 100%; max-width: 400px; }
+       .auth-logo { text-align: center; font-size: 2.2rem; font-weight: 700; color: var(--cafe-principal); margin-bottom: 0.5rem; }
+       .auth-logo span { color: var(--azul-principal); }
+       .auth-subtitle { text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.95rem; }
+       .ƁĕâṛŶŧ-panel { display: none; max-width: 900px; margin: 0 auto; padding: 2rem; }
+       .ƁĕâṛŶŧ-panel.active { display: block; }
+       .panel-header { background: var(--blanco); padding: 1.5rem 2rem; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; }
+       .panel-title { font-size: 1.6rem; color: var(--cafe-principal); font-weight: 700; display: flex; align-items: center; gap: 0.5rem; }
+       .btn-logout { background: var(--error); color: var(--blanco); border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer; font-weight: 600; }
+       .card { background: var(--blanco); padding: 2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 2rem; }
+       .card-title { font-size: 1.2rem; color: var(--cafe-principal); margin-bottom: 1.5rem; font-weight: 700; padding-bottom: 1rem; border-bottom: 2px solid var(--fondo); }
+       .form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+       .form-group { display: flex; flex-direction: column; }
+       .form-group.full-width { grid-column: 1 / -1; }
+       .form-label { font-weight: 600; margin-bottom: 0.5rem; color: var(--cafe-principal); font-size: 0.9rem; }
+       .form-label span { color: var(--error); }
+       .form-input,.form-select,.form-textarea { padding: 0.75rem; border: 1px solid var(--borde); border-radius: 6px; font-size: 0.95rem; font-family: inherit; }
+       .form-input:focus,.form-select:focus,.form-textarea:focus { outline: none; border-color: var(--azul-principal); }
+       .form-textarea { resize: vertical; min-height: 120px; }
+       .form-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
+       .btn { padding: 0.9rem 2rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-size: 0.95rem; }
+       .btn-primary { background: var(--azul-principal); color: var(--blanco); flex: 1; }
+       .btn-primary:hover { background: var(--azul-hover); }
+       .btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+       .btn-secondary { background: var(--borde); color: var(--texto); }
+       .alert { padding: 1rem 1.5rem; border-radius: 6px; margin-bottom: 1.5rem; display: none; font-size: 0.95rem; }
+       .alert-success { background: #E8F5E9; color: var(--exito); border-left: 4px solid var(--exito); }
+       .alert-error { background: #FFEBEE; color: var(--error); border-left: 4px solid var(--error); }
+       .mods-list { display: grid; gap: 1rem; }
+       .mod-item { background: var(--fondo); padding: 1.2rem; border-radius: 8px; border: 1px solid var(--borde); display: flex; justify-content: space-between; align-items: center; }
+       .mod-info h4 { color: var(--cafe-principal); margin-bottom: 0.3rem; }
+       .mod-meta { font-size: 0.85rem; color: #666; }
+       .badge { display: inline-block; padding: 0.25rem 0.7rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; margin-left: 0.5rem; }
+       .badge-addons { background: #E3F2FD; color: #1565C0; }
+       .badge-texturas { background: #F3E5F5; color: #6A1B9A; }
+       .badge-dlc { background: #FFF3E0; color: #E65100; }
+       .badge-shaders { background: #E8F5E9; color: #2E7D32; }
+       .badge-mundos { background: #E0F2F1; color: #00695C; }
+       .badge-skins { background: #FCE4EC; color: #C2185B; }
+       .btn-delete { background: var(--error); color: var(--blanco); border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; font-weight: 600; }
+        @media (max-width: 768px) {.form-grid { grid-template-columns: 1fr; }.panel-header { flex-direction: column; gap: 1rem; } }
     </style>
 </head>
 <body>
@@ -317,7 +97,6 @@
                         <label class="form-label">Nombre del Mod <span>*</span></label>
                         <input type="text" class="form-input" id="nombre" required>
                     </div>
-
                     <div class="form-group">
                         <label class="form-label">Categoría <span>*</span></label>
                         <select class="form-select" id="categoria" required>
@@ -330,12 +109,10 @@
                             <option value="Skins">Skins</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label class="form-label">Versión <span>*</span></label>
                         <input type="text" class="form-input" id="version" placeholder="v1.0.0" required>
                     </div>
-
                     <div class="form-group">
                         <label class="form-label">Badge</label>
                         <select class="form-select" id="badge">
@@ -345,23 +122,18 @@
                             <option value="Actualizado">Actualizado</option>
                         </select>
                     </div>
-
                     <div class="form-group full-width">
                         <label class="form-label">Descripción <span>*</span></label>
                         <textarea class="form-textarea" id="descripcion" required></textarea>
                     </div>
-
                     <div class="form-group">
                         <label class="form-label">URL de Imagen <span>*</span></label>
                         <input type="url" class="form-input" id="imagen" placeholder="https://..." required>
                     </div>
-
                     <div class="form-group">
                         <label class="form-label">Link de Descarga <span>*</span></label>
                         <input type="url" class="form-input" id="link" placeholder="https://..." required>
                     </div>
-                </div>
-
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary" id="submitBtn">Publicar en BearYT</button>
                     <button type="button" class="btn btn-secondary" id="clearBtn">Limpiar</button>
@@ -379,11 +151,12 @@
 
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-        import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, query, orderBy, limit, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+        import { getDatabase, ref, push, set, onValue, remove } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
 
         const firebaseConfig = {
             apiKey: "AIzaSyBPdpCA8xnoZUKM1zkbRbiy6GkrkKNW9so",
             authDomain: "bearyt678.firebaseapp.com",
+            databaseURL: "https://bearyt678-default-rtdb.firebaseio.com",
             projectId: "bearyt678",
             storageBucket: "bearyt678.firebasestorage.app",
             messagingSenderId: "830162245201",
@@ -394,8 +167,8 @@
         const PANEL_PASSWORD = 'BearYT2026';
 
         const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const ƁĕâṛŶŧ = { db, collection: 'bearyt_mods' };
+        const db = getDatabase(app);
+        const ƁĕâṛŶŧ = { db, path: 'bearyt_mods' };
 
         const authScreen = document.getElementById('authScreen');
         const panel = document.getElementById('panel');
@@ -413,7 +186,6 @@
         authForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const password = document.getElementById('passwordInput').value;
-            
             if (password === PANEL_PASSWORD) {
                 sessionStorage.setItem('bearyt_panel_auth', 'true');
                 mostrarPanel();
@@ -449,18 +221,13 @@
             setTimeout(() => alert.style.display = 'none', 4000);
         }
 
-        ƁĕâṛŶŧ.cargarMods = async function() {
-            try {
-                const q = query(collection(ƁĕâṛŶŧ.db, ƁĕâṛŶŧ.collection), orderBy('fechaCreacion', 'desc'), limit(10));
-                const snapshot = await getDocs(q);
-                const mods = [];
-
-                snapshot.forEach(doc => {
-                    mods.push({ id: doc.id, ...doc.data() });
-                });
-
+        ƁĕâṛŶŧ.cargarMods = function() {
+            const modsRef = ref(ƁĕâṛŶŧ.db, ƁĕâṛŶŧ.path);
+            onValue(modsRef, (snapshot) => {
                 const modsList = document.getElementById('modsList');
-                if (mods.length > 0) {
+                if (snapshot.exists()) {
+                    const data = snapshot.val();
+                    const mods = Object.keys(data).map(key => ({ id: key,...data[key] })).reverse().slice(0, 10);
                     modsList.innerHTML = mods.map(mod => `
                         <div class="mod-item">
                             <div class="mod-info">
@@ -473,9 +240,9 @@
                 } else {
                     modsList.innerHTML = '<div style="text-align: center; color: #666; padding: 2rem;">No hay mods publicados aún</div>';
                 }
-            } catch (error) {
+            }, (error) => {
                 mostrarError('Error al cargar: ' + error.message);
-            }
+            });
         };
 
         uploadForm.addEventListener('submit', async (e) => {
@@ -493,14 +260,15 @@
                 badge: document.getElementById('badge').value,
                 descargas: 0,
                 valoracion: 5.0,
-                fechaCreacion: serverTimestamp()
+                fechaCreacion: Date.now()
             };
 
             try {
-                await addDoc(collection(ƁĕâṛŶŧ.db, ƁĕâṛŶŧ.collection), modData);
+                const modsRef = ref(ƁĕâṛŶŧ.db, ƁĕâṛŶŧ.path);
+                const newModRef = push(modsRef);
+                await set(newModRef, modData);
                 mostrarExito('Mod publicado correctamente en BearYT');
                 uploadForm.reset();
-                ƁĕâṛŶŧ.cargarMods();
             } catch (error) {
                 mostrarError('Error al publicar: ' + error.message);
             } finally {
@@ -516,9 +284,8 @@
         ƁĕâṛŶŧ.eliminarMod = async function(id) {
             if (confirm('¿Eliminar este mod de BearYT?')) {
                 try {
-                    await deleteDoc(doc(ƁĕâṛŶŧ.db, ƁĕâṛŶŧ.collection, id));
+                    await remove(ref(ƁĕâṛŶŧ.db, `${ƁĕâṛŶŧ.path}/${id}`));
                     mostrarExito('Mod eliminado correctamente');
-                    ƁĕâṛŶŧ.cargarMods();
                 } catch (error) {
                     mostrarError('Error al eliminar: ' + error.message);
                 }
